@@ -1,0 +1,298 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Batch",
+			"Effect": "Allow",
+			"Action": "batch:*",
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor1",
+			"Effect": "Allow",
+			"Action": "cloudwatch:GetMetricStatistics",
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "ECR",
+			"Effect": "Allow",
+			"Action": "ecr:*",
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor3",
+			"Effect": "Allow",
+			"Action": [
+				"ecs:Describe*",
+				"ecs:List*"
+			],
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor4",
+			"Effect": "Allow",
+			"Action": [
+				"eks:DescribeCluster",
+				"eks:ListClusters"
+			],
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor5",
+			"Effect": "Allow",
+			"Action": [
+				"events:DeleteRule",
+				"events:Put*",
+				"events:RemoveTargets",
+				"events:List*",
+				"events:Describe*"
+			],
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor6",
+			"Effect": "Allow",
+			"Action": "glue:*",
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor7",
+			"Effect": "Allow",
+			"Action": [
+				"iam:ListRoles",
+				"iam:ListInstanceProfiles"
+			],
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor9",
+			"Effect": "Allow",
+			"Action": "lambda:*",
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor10",
+			"Effect": "Allow",
+			"Action": [
+				"logs:Describe*",
+				"logs:*",
+				"logs:TestMetricFilter",
+				"logs:FilterLogEvents",
+				"logs:Get*"
+			],
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor11",
+			"Effect": "Allow",
+			"Action": "scheduler:*",
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor12",
+			"Effect": "Allow",
+			"Action": "sts:GetServiceBearerToken",
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "Statement1",
+			"Effect": "Allow",
+			"Action": [
+				"s3:*"
+			],
+			"Resource": [
+				"arn:aws:s3:::sandbox.travelai"
+			],
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		},
+		{
+			"Sid": "VisualEditor13",
+			"Effect": "Deny",
+			"Action": [
+				"ec2:AuthorizeSecurityGroupEgress",
+				"ec2:AuthorizeSecurityGroupIngress",
+				"ec2:DeleteSubnet",
+				"ec2:CreateVpc",
+				"ec2:DescribeSecurityGroups",
+				"ec2:ModifySubnetAttribute",
+				"ec2:RevokeSecurityGroupIngress",
+				"ec2:DescribeVpcs",
+				"ec2:CreateSecurityGroup",
+				"ec2:RevokeSecurityGroupEgress",
+				"ec2:DeleteSecurityGroup",
+				"ec2:ModifyVpcAttribute",
+				"ec2:DeleteVpc",
+				"ec2:CreateSubnet",
+				"ec2:DescribeSubnets"
+			],
+			"Resource": "*",
+			"Condition": {
+				"StringEquals": {
+					"aws:RequestedRegion": "us-west-2"
+				},
+				"ForAnyValue:IpAddress": {
+					"aws:SourceIp": [
+						"35.166.156.184/32",
+						"182.160.100.56/29",
+						"182.160.106.200/29"
+					]
+				}
+			}
+		}
+	]
+}
